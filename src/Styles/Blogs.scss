@@ -1,0 +1,16 @@
+.s-blog-list {
+    article {
+        img {
+            width: 60%;
+            @media screen and (max-width: 600px) {
+                width: 90%;
+            }
+        }
+    }
+    .img {
+        width: 60%;
+        @media screen and (max-width: 600px) {
+            width: 90%;
+        }
+    }
+}
