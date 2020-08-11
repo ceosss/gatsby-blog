@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import "./../css/main.css"
 
 const Home = ({
   data: {
@@ -11,9 +12,14 @@ const Home = ({
 }) => {
   console.log(fluid)
   return (
-    <div>
+    <div className="home">
       <h1>Hello From Swaraj</h1>
-      <Img fluid={fluid} />
+      <div className="img">
+        <Img fluid={fluid} />
+      </div>
+      <div className="btn">
+        <Link to="/blogs">Blog</Link>
+      </div>
     </div>
   )
 }
