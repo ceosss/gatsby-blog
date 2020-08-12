@@ -16,19 +16,20 @@ const Blogs = ({
       <div className="blog-list">
         {blogs.map(blog => (
           <div className="s-blog-list" key={blog.slug}>
-            <div className="img">
-              <Img fluid={blog.image.childImageSharp.fluid} />
-            </div>
-            <h2>{blog.title}</h2>
-            <p>{blog.description}</p>
-            <span>
-              <p>{blog.category}</p>
-              <p>
-                <em>{blog.date}</em>
-              </p>
-            </span>
+            <Link to={blog.slug}>
+              <div className="img">
+                <Img fluid={blog.image.childImageSharp.fluid} />
+              </div>
+              <h2>{blog.title}</h2>
+              <p>{blog.description}</p>
+              <span>
+                <p>{blog.category}</p>
+                <p>
+                  <em>{blog.date}</em>
+                </p>
+              </span>
 
-            {/* <article>
+              {/* <article>
             <ReactMarkdown
               source={blog.content}
               transformImageUri={uri =>
@@ -36,9 +37,11 @@ const Blogs = ({
               }
             />
           </article> */}
+            </Link>
           </div>
         ))}
       </div>
+
       <div className="btn">
         <Link to="/">HOME</Link>
       </div>

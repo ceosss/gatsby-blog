@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import "./../css/main.css"
+import "./../css/main.scss"
 
 const Home = ({
   data: {
